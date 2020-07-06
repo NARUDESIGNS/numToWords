@@ -108,6 +108,5 @@ let output = document.getElementById('output');
 userInput.addEventListener('input', () => {
     let result = convertToWords(userInput.value);
     output.innerText = result;
-    userInput.value = userInput.value.toLocaleString('en');
     if(userInput.value == "" || userInput.value == 0) output.innerText = 'ZERO'
 });
