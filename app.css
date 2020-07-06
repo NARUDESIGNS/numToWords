@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
 }
 body {
     background-color: rgb(53, 53, 53);
@@ -52,10 +57,12 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     outline-color: rgb(255, 204, 109);
+    letter-spacing: 1.5px;
 }
 ::placeholder {
     font-style: italic;
     color: rgb(199, 199, 199);
+    letter-spacing: 0;
 }
 .data-process h4 {
     color: rgb(80, 80, 80);
