@@ -19,7 +19,7 @@ function toHundred (digits){
     }
 
     if (digits[0] != 0 && digits[1] != 0 && digits[2] != 0){
-        return val = `${wordObj[digits[0]]} HUNDRED AND ${wordObj[digits[1] + '0']}${wordObj[digits[2]]}`;
+        return val = `${wordObj[digits[0]]} HUNDRED AND ${digits[1] == 1 ?  wordObj[digits[1] + digits[2]] : wordObj[digits[1] + '0'] + wordObj[digits[2]]}`;
     }
 
     else if (digits[0] != 0 && digits[1] == 0 && digits[2] == 0){
