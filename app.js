@@ -100,12 +100,17 @@ function convertToWords (num){
     return result;
 }
 
+//FORMAT NUMBERS WITH COMMA
+const format = num => num.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
+
 //GET DOCUMENT RESOURCES
 let userInput = document.getElementById('input');
 let output = document.getElementById('output');
 
 //PROCESS INPUT
 userInput.addEventListener('input', () => {
+    //prevent the use of decimals
+    if(userInput.value.includes('.')) userInput.value = userInput.value.replace(/\./g, ''); 
     let result = convertToWords(userInput.value);
     output.innerText = result;
     if(userInput.value == "" || userInput.value == 0) output.innerText = 'ZERO'
