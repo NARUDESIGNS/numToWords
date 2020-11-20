@@ -109,8 +109,10 @@ let output = document.getElementById('output');
 
 //PROCESS INPUT
 userInput.addEventListener('input', () => {
-    //prevent the use of decimals
-    if(userInput.value.includes('.')) userInput.value = userInput.value.replace(/\./g, ''); 
+    for(let each of userInput.value){
+       if(isNaN(each)) userInput.value = userInput.value.replace(each, '');
+    }
+    userInput.value = format(userInput.value);
     let result = convertToWords(userInput.value);
     output.innerText = result;
     if(userInput.value == "" || userInput.value == 0) output.innerText = 'ZERO'
