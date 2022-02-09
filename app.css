@@ -27,10 +27,7 @@ body {
     -o-border-radius: 10px;
 }
 .container .logo {
-    background-color: rgb(53, 53, 53);
-    color: rgb(255, 204, 109);
-    width: 60%;
-    max-width: 200px;
+    color: #505050;
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 50px;
